@@ -1,0 +1,59 @@
+body {
+    /* colors to use in the app. Defined in the body to be used anywhere */
+    --background-dark: #1F2937;
+    --background-quote: #E5E7EB;
+    --button-color: #3882F6;
+    --button-color-hover: #5291f6;
+
+    --text-main-color: #F9FAF8;
+    --text-logo-color: #F9FAF8;
+    --text-secondary-color: #E5E7EB;
+    --text-quote-color: #1F2937;
+}
+
+* {
+    /* Font is Roboto universally, and medium weight unless otherwise specified. */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    /* font-optical-sizing: auto; */
+    /* font-style: normal; */
+
+    /* These default settings are needed. Unsure whether these go in * or somewhere else. */
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: var(--background-dark);
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bolder;
+    color: var(--text-main-color)
+}
+
+h2 {
+    font-size: 18px;
+    color: var(--text-secondary-color);
+}
+
+.logo-text {
+    font-size: 24px;
+    color: var(--text-logo-color);
+}
+
+/* Some accessible button UX such as cursor: pointer and changed background color on hover */
+.button {
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: var(--button-color);
+    color: var(--text-main-color);
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--button-color-hover);
+}
