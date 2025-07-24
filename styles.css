@@ -17,8 +17,6 @@ body {
     font-weight: 400;
     /* font-optical-sizing: auto; */
     /* font-style: normal; */
-
-    /* These default settings are needed. Unsure whether these go in * or somewhere else. */
     padding: 0;
     margin: 0;
 }
@@ -30,12 +28,19 @@ header {
 h1 {
     font-size: 48px;
     font-weight: bolder;
-    color: var(--text-main-color)
+    color: var(--text-main-color);
+    margin-bottom: 4px;
 }
 
 h2 {
     font-size: 18px;
     color: var(--text-secondary-color);
+    margin-bottom: 36px;
+}
+
+section {
+    min-height: 30vh;
+    width: 100%;
 }
 
 .logo-text {
@@ -44,16 +49,44 @@ h2 {
 }
 
 /* Some accessible button UX such as cursor: pointer and changed background color on hover */
-.button {
+button {
     border: none;
     border-radius: 6px;
     font-size: 16px;
     background-color: var(--button-color);
     color: var(--text-main-color);
-    padding: 8px 20px;
+    padding: 8px 40px;
     cursor: pointer;
 }
 
-.button:hover {
+button:hover {
     background-color: var(--button-color-hover);
+}
+
+#hero-section {
+    background-color: var(--background-dark);
+}
+
+.section-content {
+    /* put all the content for each section in the center with some padding: */
+    width: 60%;
+    margin: 0 auto;
+}
+
+.hero-content {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 0;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-img {
+    flex: 1;
+    max-width: 50%;
+    object-fit: contain;
 }
