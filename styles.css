@@ -171,4 +171,14 @@ button:hover {
     justify-content: center;
     text-align: center;
 }
+
+.quote-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-content {
+    width: 60%;
+    margin: 0 auto;
+}
   
