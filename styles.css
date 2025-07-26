@@ -167,11 +167,7 @@ button:hover {
   
 #quote-section {
     background-color: #e5e7eb;
-<<<<<<< HEAD
     padding: 60px 0;
-=======
-    padding: 60px 60px;
->>>>>>> 25bdbba31628c40b1f7535cae0dad7d9bcc04479
     font-style: italic;
     display: flex;
     justify-content: center;
