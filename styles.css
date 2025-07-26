@@ -166,7 +166,7 @@ button:hover {
   
 #quote-section {
     background-color: #e5e7eb;
-    padding: 60px 60px;
+    padding: 60px 0px;
     font-style: italic;
     display: flex;
     justify-content: center;
