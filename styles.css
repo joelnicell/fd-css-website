@@ -88,6 +88,7 @@ button {
     color: var(--text-main-color);
     padding: 8px 40px;
     cursor: pointer;
+    min-width: 140px;
 }
 
 button:hover {
@@ -114,6 +115,10 @@ button:hover {
 
 .hero-text {
     flex: 1;
+}
+
+.hero-text h2 {
+    font-weight: 200;
 }
 
 .hero-img {
@@ -191,4 +196,49 @@ button:hover {
     color: #1F2937;
     padding-left: 57%;
 }
+
+#cta-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   
+.cta-card {
+    margin: 60px auto;
+    background-color: var(--button-color);
+    display: flex;
+    border-radius: 12px;
+    width: 60%;
+    padding: 60px 24px;
+    gap: 24px;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.cta-text {
+    color: var(--text-main-color);
+}
+
+p.cta-text {
+    font-weight: 200;
+}
+
+.cta-card button {
+    border: 2px solid;
+    height: fit-content;
+}
+
+footer {
+    background-color: var(--background-dark);
+    height: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    color: var(--text-main-color);
+    font-weight: 100;
+}
