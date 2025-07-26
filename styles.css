@@ -21,35 +21,36 @@ body {
     margin: 0;
 }
 
-header {
-    display: flex;
+.header-section {
     background-color: var(--background-dark);
 }
-
-.header-container{
+  
+.header-content {
+    padding-top: 1%;
     display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: space-between;
+    /* gap: 40px; */
 }
-
+  
 .logo {
     font-size: 24px;
     font-weight: 700;
     color: var(--text-logo-color);
 }
-
+  
 .nav {
     display: flex;
     gap: 16px;
 }
-
+  
 .nav a {
     color: var(--text-secondary-color);
     text-decoration: none;
     font-size: 14px;
     font-weight: 300;
 }
-
+  
 .nav a:hover {
     text-decoration: underline;
 }
@@ -125,14 +126,14 @@ button:hover {
     text-align: center;
     background-color: white;
 }
-
+  
 .section-title {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 40px;
-    color: #1F2937;
+    color: #1f2937;
 }
-
+  
 .info-cards {
     display: flex;
     justify-content: center;
@@ -143,29 +144,31 @@ button:hover {
     margin: 0 auto;
     text-align: center;
 }
-
+  
 .info-card {
-  max-width: 150px;
-  width: 150px;
+    max-width: 150px;
+    width: 150px;
 }
-
+  
 .card-img {
-  width: 150px;
-  height: 150px;
-  background-color: #E5E7EB;
-  border-radius: 12px;
-  margin: 0 auto 15px auto;
+    width: 150px;
+    height: 150px;
+    background-color: #e5e7eb;
+    border-radius: 12px;
+    margin: 0 auto 15px auto;
 }
-
+  
 .info-card p {
-  font-size: 14px;
-  color: #4B5563;
+    font-size: 14px;
+    color: #4b5563;
 }
-
+  
 #quote-section {
-    background-color: #E5E7EB;
+    background-color: #e5e7eb;
     padding: 60px 100px;
     font-style: italic;
     display: flex;
     justify-content: center;
-  }
+    text-align: center;
+}
+  
