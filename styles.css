@@ -166,7 +166,7 @@ button:hover {
   
 #quote-section {
     background-color: #e5e7eb;
-    padding: 60px 100px;
+    padding: 60px 60px;
     font-style: italic;
     display: flex;
     justify-content: center;
@@ -183,7 +183,7 @@ button:hover {
     font-weight: 300;
     font: italic;
     color: #1F2937;
-  }
+}
 
 .quote-author {
     font-weight: 600;
