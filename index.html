@@ -12,28 +12,29 @@
 <body>
     
     <header class="header-section">
-        <div class="section-content header-content">
-            <div class="logo"><strong>WebDevCademy</strong></div>
-            <nav class="nav">
-                <a href="header link one">Our team</a>
-                <a href="header link two">Your future with us</a>
-                <a href="header link three">Contact</a>
-            </nav>
+      <!-- remove this header-content div -->
+        <div class="header-content">
+        <div class="logo"><strong>WebDevCademy</strong></div>
+        <nav class="nav">
+            <a href="./pages/about.html">What is Web Dev?</a>
+            <a href="header link two">Your future with us</a>
+            <a href="header link three">Contact</a>
+        </nav>
         </div>
     </header>
     
     <main>
         <section id="hero-section">
-            <div class="section-content hero-content">
-                <div class="hero-text">
-                    <h1>Frontend Development Course</h1>
-                    <h2>Develop your HTML, CSS and Javascript skills on this course! Go from basic to pro in just 4 weeks!</h2>
-                    <button class="button">
-                        Get Started Now
-                    </button>
-                </div>
-                <img class="hero-img" src="./assets/hero-img.jpg" alt="Fun Image">
+            <div class="hero-text">
+                <h1>Frontend Development Course</h1>
+                <h2>Develop your HTML, CSS and Javascript skills on this course! Go from basic to pro in just 4 weeks!</h2>
+                <button class="button">
+                    Get Started Now
+                </button>
             </div>
+            <picture class="hero-img">
+                <img src="./assets/hero-img.jpg" alt="Man on Laptop">
+            </picture>
         </section>
         
         <section id="random-section">
@@ -66,7 +67,12 @@
                 </div>
               </div>
             </div>
-          </section>
+            <button>
+                <a href="./pages/about.html">
+                  What is web dev?
+                </a>
+            </button>
+        </section>
         
         <section id="quote-section">
             <div class="section-content quote-wrapper">
@@ -81,13 +87,11 @@
           </section>
         
         <section id="cta-section">
-            <div class="section-content cta-card">
-              <div>
-                <h3 class="cta-text">Call to action! It's time!</h3>
-                <p class="cta-text">Sign up for our product by clicking that button right over there!</p>
-              </div>
-              <button>Sign Up</button>
-            </div>
+          <div>
+            <h3 class="cta-text">Call to action! It's time!</h3>
+            <p class="cta-text">Sign up for our product by clicking that button right over there!</p>
+          </div>
+          <button>Sign Up</button>
         </section>
     </main>
     <footer>

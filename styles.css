@@ -9,6 +9,9 @@ body {
     --text-logo-color: #F9FAF8;
     --text-secondary-color: #E5E7EB;
     --text-quote-color: #1F2937;
+
+    --header-height: 64px;
+    --footer-height: 64px;
 }
 
 * {
@@ -19,10 +22,12 @@ body {
     /* font-style: normal; */
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .header-section {
     background-color: var(--background-dark);
+    min-height: var(--header-height);
 }
   
 .header-content {
@@ -69,9 +74,23 @@ h2 {
     margin-bottom: 36px;
 }
 
-section {
-    min-height: 30vh;
+a {
+    color: var(--text-main-color);
+    text-decoration: none;
+}
+
+section, header {
     width: 100%;
+    padding: 0 18%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 60px 18%;
+}
+
+main {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height))
 }
 
 .logo-text {
@@ -97,12 +116,12 @@ button:hover {
 
 #hero-section {
     background-color: var(--background-dark);
-}
-
-.section-content {
-    /* put all the content for each section in the center with some padding: */
-    width: 60%;
-    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* padding: 48px 0; */
 }
 
 .hero-content {
@@ -123,7 +142,10 @@ button:hover {
 
 .hero-img {
     flex: 1;
-    max-width: 50%;
+}
+
+.hero-img img {
+    width: 100%;
     object-fit: contain;
 }
 
@@ -201,6 +223,17 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+
+     margin: 60px auto;
+    background-color: var(--button-color);
+    display: flex;
+    border-radius: 12px;
+    width: 60%;
+    padding: 60px 24px;
+    gap: 24px;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
 }
   
 .cta-card {
@@ -241,4 +274,28 @@ footer {
 .copyright {
     color: var(--text-main-color);
     font-weight: 100;
+}
+
+.secondary-link {
+    color: var(--text-secondary-color);
+}
+
+/* ===== ABOUT PAGE ===== */
+
+figure {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+figure  img {
+    flex: 1;
+    object-fit: cover;
+    aspect-ratio: 1;
+    max-width: 50%;
+}
+
+figure, figcaption {
+    flex: 2;
 }
