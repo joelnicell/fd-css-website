@@ -1,3 +1,7 @@
+html { 
+    scroll-behavior: smooth; 
+}
+
 body {
     /* colors to use in the app. Defined in the body to be used anywhere */
     --background-dark: #1F2937;
@@ -23,6 +27,10 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+main {
+    position: relative;
 }
 
 .header-section {
@@ -108,6 +116,7 @@ button {
     padding: 8px 40px;
     cursor: pointer;
     min-width: 140px;
+    margin: 24px 0px;
 }
 
 button:hover {
@@ -253,6 +262,10 @@ button:hover {
     color: var(--text-main-color);
 }
 
+h3.cta-text {
+    margin-bottom: 16px;
+}
+
 p.cta-text {
     font-weight: 200;
 }
@@ -280,22 +293,120 @@ footer {
     color: var(--text-secondary-color);
 }
 
+.back-to-top {
+    border-radius: 100px;
+    display: block;
+    width: 48px;
+    min-width: 0;
+    height: 48px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.20);
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-dark);
+}
+
+.back-to-top img {
+    width: 24px;
+    height: 24px;
+}
+
+.back-to-top:hover {
+    background-color: #3a4c65;
+}
+
 /* ===== ABOUT PAGE ===== */
+
+.about-title {
+    color: var(--background-dark);
+    margin-bottom: 20px;
+}
+
 
 figure {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    gap: 24px;
     align-items: center;
+    padding: 20px 40px;
+    border-radius: 16px;
+    background-color: var(--text-main-color);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
 }
 
-figure  img {
+figure img {
     flex: 1;
     object-fit: cover;
     aspect-ratio: 1;
-    max-width: 50%;
+    max-width: 33%;
+    width: clamp(150px, 33%, 350px);
+    /* width:fit-content; */
+    /* max-width: 50%; */
 }
 
-figure, figcaption {
+figcaption {
     flex: 2;
+}
+
+.about-card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.about-p {
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+
+figcaption h2 {
+    color: var(--background-dark);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#about-cta-section {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#about-cta-section * {
+    margin-bottom: 24px;
+}
+
+/* #about-cta-section button {
+    display: block;
+} */
+
+.muted-link {
+    color: rgba(0,0,0, 0.3);
+    padding: 4px 20px;
+}
+
+/* responsive design */
+@media only screen and (max-width: 738px) {
+  figure {
+    flex-direction: column;
+  }
+
+  #what-css-section figure {
+    flex-direction: column-reverse;
+  }
+
+  figure img {
+    max-width: 100%;
+    height: clamp(150px, 33%, 350px);
+    height: auto;
+  }
+
+  figure figcaption {
+    flex: 1;
+  }
+
+  #cta-section {
+    flex-direction: column;
+  }
 }
