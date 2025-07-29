@@ -37,6 +37,7 @@ main {
     background-color: var(--background-dark);
     min-height: var(--header-height);
     justify-content: space-between;
+    align-items: center;
 }
   
 .header-content {
