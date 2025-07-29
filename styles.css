@@ -36,13 +36,12 @@ main {
 .header-section {
     background-color: var(--background-dark);
     min-height: var(--header-height);
+    justify-content: space-between;
 }
   
 .header-content {
     padding-top: 1%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     /* gap: 40px; */
 }
   
