@@ -403,4 +403,22 @@ figcaption h2 {
   #cta-section {
     flex-direction: column;
   }
+
+  #hero-section {
+    flex-direction: column;
+  }
+
+  .cta-text {
+    text-align: center;
+  }
+
+  .info-cards {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .info-card {
+    max-width: none;
+    flex: 40%;
+  }
 }
