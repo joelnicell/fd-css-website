@@ -385,6 +385,8 @@ figcaption h2 {
 @media only screen and (max-width: 738px) {
   figure {
     flex-direction: column;
+    gap: 16px;
+    align-items: center;
   }
 
   #what-css-section figure {
@@ -422,4 +424,27 @@ figcaption h2 {
     max-width: none;
     flex: 40%;
   }
+}
+
+.future-title {
+    color: var(--background-dark);
+    margin-bottom: 20px;
+}
+
+.future-p {
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+
+.future-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.future-card {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
