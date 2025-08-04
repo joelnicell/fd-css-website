@@ -47,12 +47,12 @@ header {
     color: var(--text-logo-color);
 }
   
-.nav {
+nav {
     display: flex;
     gap: 16px;
 }
   
-.nav a {
+nav a {
     color: var(--text-secondary-color);
     text-decoration: none;
     font-size: 18px;
@@ -60,7 +60,7 @@ header {
     font-weight: 300;
 }
   
-.nav a:hover {
+nav a:hover {
     text-decoration: underline;
 }
 
@@ -484,13 +484,13 @@ textarea {
 @media only screen and (max-width: 738px) {
     header {
         flex-direction: column;
+        justify-content: space-around;
         align-items: start;
-        gap: 12px;
+        /* gap: 12px; */
     }
 
     nav a {
-        font-size: 8px;
-        font-weight: 900;
+        font-size: 14px;
     }
 
     figure {
