@@ -33,7 +33,7 @@ main {
     position: relative;
 }
 
-.header-section {
+header {
     display: flex;
     background-color: var(--background-dark);
     min-height: var(--header-height);
@@ -89,7 +89,7 @@ section, header {
 }
 
 section {
-    padding: 60px 18%;
+    padding: 40px 18%;
 }
 
 main {
@@ -191,7 +191,7 @@ button:hover {
     object-fit: cover;
 }
   
-.info-card p {
+.info-card figcaption {
     font-size: 14px;
     color: #4b5563;
 }
@@ -319,8 +319,27 @@ footer {
     margin-bottom: 20px;
 }
 
+.about-card img {
+    flex: 1;
+    object-fit: cover;
+    aspect-ratio: 1;
+    max-width: 33%;
+    width: clamp(150px, 33%, 350px);
+}
 
-figure {
+.future-card img {
+    flex: 1;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    max-width: 33%;
+    width: clamp(150px, 33%, 350px);
+}
+
+figcaption {
+    flex: 2;
+}
+
+.about-card, .future-card {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -330,25 +349,8 @@ figure {
     border-radius: 16px;
     background-color: var(--text-main-color);
     box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
-}
-
-figure img {
-    flex: 1;
-    object-fit: cover;
-    aspect-ratio: 1;
-    max-width: 33%;
-    width: clamp(150px, 33%, 350px);
-    /* width:fit-content; */
-    /* max-width: 50%; */
-}
-
-figcaption {
-    flex: 2;
-}
-
-.about-card {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
 }
 
 .about-p {
@@ -378,7 +380,7 @@ figcaption h2 {
 
 .muted-link {
     color: rgba(0,0,0, 0.3);
-    padding: 4px 20px;
+    padding: 4px 0;
 }
 
 /* responsive design */
@@ -444,7 +446,7 @@ figcaption h2 {
     margin: 0 auto;
 }
 
-.future-card {
+/* .future-card {
     padding-top: 20px;
     padding-bottom: 20px;
-}
+} */
