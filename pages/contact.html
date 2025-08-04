@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <strong class="logo">WebDevCademy</strong>
+        </a>
+        <nav class="nav">
+            <a href="./about.html">What is Web Dev?</a>
+            <a href="./yourfuturewithus.html">Your future with us</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="contact-section">
+            <h1 class="contact-title">Get in touch below!</h1>
+            <form action="" id="contact-form">
+                <label for="plan" class="plan-card free-plan">Free plan
+                    <p>get all the perks of the pro plan for a 2 week free trial!</p>
+                    <input type="radio" name="plan" class="radio-input">
+                </label>
+                <label for="plan" class="plan-card pro-plan">Pro Plan
+                    <p>Get access to world leading professionals for the full 4 weeks. (+ a bonus cat week!) <br> Feedback included</p>
+                    <input type="radio" name="plan" class="radio-input" checked="true">
+                </label>
+                <label>First Name:
+                    <input type="text" name="first-name" placeholder="John" required>
+                </label>
+                <label >Last Name:
+                    <input type="text" name="last-name" placeholder="Smith" required>
+                </label>
+                <label >Email Address:
+                    <input type="text" name="email" placeholder="email@email.com" required>
+                </label>
+                <label >Mobile Number:
+                    <input type="number" name="mobile" placeholder="+44 1234 56789" required>
+                </label>
+                <label >Any comments?
+                    <textarea name="comments" id="comments-textarea" placeholder="Let us know your thoughts!!"></textarea>
+                </label>
+                <button type="submit" form="contact-form" value="submit_form" class="button" tabindex="0">Submit</button>
+            </form>
+        </section>
+        <a href="#contact-section" class="back-to-top"><img src="../assets/chevron-up.png" alt="Chevron Up"></a>
+    </main>
+    <footer>
+        <small class="copyright">WebDevCademy Copyright 2025©</small>
+    </footer>
+</body>
+</html>

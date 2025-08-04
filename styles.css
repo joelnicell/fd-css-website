@@ -80,6 +80,7 @@ h2 {
 a {
     color: var(--text-main-color);
     text-decoration: none;
+    display: inline-flex;
 }
 
 section, header {
@@ -101,21 +102,30 @@ main {
     color: var(--text-logo-color);
 }
 
-/* Some accessible button UX such as cursor: pointer and changed background color on hover */
 button {
+    all: unset;
+}
+
+/* Some accessible button UX such as cursor: pointer and changed background color on hover */
+button, .button {
     border: none;
     border-radius: 6px;
     font-size: 16px;
     background-color: var(--button-color);
     color: var(--text-main-color);
-    padding: 8px 40px;
     cursor: pointer;
-    min-width: 140px;
     margin: 24px 0px;
+    padding: 8px 40px;
+    text-align: center;
+    min-width: 140px;
 }
 
-button:hover {
+button:hover, .button:hover {
     background-color: var(--button-color-hover);
+}
+
+button:focus-visible {
+    box-shadow: 0 0px 0 5px rgb(58, 47, 136);
 }
 
 #hero-section {
@@ -289,16 +299,15 @@ footer {
 }
 
 .back-to-top {
-    border-radius: 100px;
-    display: block;
-    width: 48px;
+    border-radius: 50px;
     min-width: 0;
-    height: 48px;
+    min-height: 0;
     box-shadow: 0px 5px 20px rgba(0,0,0,0.20);
     position: fixed;
     right: 40px;
     bottom: 40px;
-    padding: 0;
+    padding: 12px;
+    
     margin: 0;
     background-color: var(--background-dark);
 }
@@ -314,7 +323,7 @@ footer {
 
 /* ===== ABOUT PAGE ===== */
 
-.about-title {
+.about-title, .future-title, .contact-title {
     color: var(--background-dark);
     margin-bottom: 20px;
 }
@@ -348,9 +357,10 @@ figcaption {
     padding: 20px 40px;
     border-radius: 16px;
     background-color: var(--text-main-color);
+}
+
+.about-card, .future-card, #contact-form {
     box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
-    /* padding-top: 20px;
-    padding-bottom: 20px; */
 }
 
 .about-p {
@@ -374,64 +384,11 @@ figcaption h2 {
     margin-bottom: 24px;
 }
 
-/* #about-cta-section button {
-    display: block;
-} */
-
 .muted-link {
     color: rgba(0,0,0, 0.3);
     padding: 4px 0;
 }
 
-/* responsive design */
-@media only screen and (max-width: 738px) {
-  figure {
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-  }
-
-  #what-css-section figure {
-    flex-direction: column-reverse;
-  }
-
-  figure img {
-    max-width: 100%;
-    height: clamp(150px, 33%, 350px);
-    height: auto;
-  }
-
-  figure figcaption {
-    flex: 1;
-  }
-
-  #cta-section {
-    flex-direction: column;
-  }
-
-  #hero-section {
-    flex-direction: column;
-  }
-
-  .cta-text {
-    text-align: center;
-  }
-
-  .info-cards {
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .info-card {
-    max-width: none;
-    flex: 40%;
-  }
-}
-
-.future-title {
-    color: var(--background-dark);
-    margin-bottom: 20px;
-}
 
 .future-p {
     line-height: 24px;
@@ -446,7 +403,152 @@ figcaption h2 {
     margin: 0 auto;
 }
 
-/* .future-card {
-    padding-top: 20px;
-    padding-bottom: 20px;
-} */
+/* ===== Contact Page ===== */
+
+input, textarea {
+    display: block;
+    margin-bottom: 24px;
+    margin-top: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--background-quote);
+    min-height: 20px;
+    &:focus-visible, &:focus {
+        border: 2px solid var(--background-dark);
+    }
+    padding: 6px 10px;
+    font-size: 14px;
+    width: 50%;
+}
+
+label {
+    display: inline;
+    width: 100%;
+}
+
+label p {
+    font-size: 12px;
+    color: rgb(115, 115, 129);
+    line-height: 20px;
+
+}
+
+textarea {
+    min-height: 120px;
+}
+
+#contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-form {
+    background-color: var(--text-logo-color);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    justify-content: start;
+    height: fit-content;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.plan-card {
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.free-plan {
+    border: 3px solid rgb(188, 184, 194);
+    box-shadow: 0px 0px 10px rgba(188, 184, 194, 0.5);
+
+}
+
+.pro-plan {
+    border: 3px solid rgb(127, 18, 131);
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(127, 18, 131, 0.5);
+    background-color: white;
+}
+
+.radio-input {
+    margin: 4px 0;
+}
+
+
+/* ===== responsive design ==== */
+@media only screen and (max-width: 738px) {
+    header {
+        flex-direction: column;
+        align-items: start;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 8px;
+        font-weight: 900;
+    }
+
+    figure {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    #what-css-section figure {
+        flex-direction: column-reverse;
+    }
+
+    figure img {
+        max-width: 100%;
+        height: clamp(150px, 33%, 350px);
+        height: auto;
+    }
+
+    figure figcaption {
+        flex: 1;
+    }
+
+    #cta-section {
+        flex-direction: column;
+    }
+
+    #hero-section {
+        flex-direction: column;
+    }
+
+    .cta-text {
+        text-align: center;
+    }
+
+    .info-cards {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .info-card {
+        max-width: none;
+        flex: 40%;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    #contact-section {
+        align-items: start;
+    }
+
+    #contact-form {
+        width: 100%;
+    }
+
+    .plan-card {
+        width: 100%;
+        text-align: center;
+    }
+}
